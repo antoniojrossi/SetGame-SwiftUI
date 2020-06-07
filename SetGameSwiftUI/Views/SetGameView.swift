@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SetGameView: View {
+    @ObservedObject var game: CardSetGame
+
     var body: some View {
-        Text("Hello, World!")
+        Text(game.name)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CardSetGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SetGameView(game: CardSetGame())
     }
 }

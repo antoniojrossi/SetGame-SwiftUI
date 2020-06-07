@@ -3,27 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00597DA248CF24600EE78A6 /* SetGameCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597D9248CF24600EE78A6 /* SetGameCardBackView.swift */; };
+		F00597DE248D13FD00EE78A6 /* SetGameCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597DD248D13FD00EE78A6 /* SetGameCardFrontView.swift */; };
+		F00597E2248D168F00EE78A6 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597E1248D168F00EE78A6 /* CardViewModifier.swift */; };
+		F00597E4248D188F00EE78A6 /* View+AsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597E3248D188F00EE78A6 /* View+AsCard.swift */; };
+		F01F5F1D248CCF3A00D4940F /* SetGameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F5F1C248CCF3A00D4940F /* SetGameCardView.swift */; };
 		F03657A3248C0D70008392C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A2248C0D70008392C7 /* AppDelegate.swift */; };
 		F03657A5248C0D70008392C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A4248C0D70008392C7 /* SceneDelegate.swift */; };
-		F03657A7248C0D70008392C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A6248C0D70008392C7 /* ContentView.swift */; };
+		F03657A7248C0D70008392C7 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A6248C0D70008392C7 /* SetGameView.swift */; };
 		F03657A9248C0D71008392C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03657A8248C0D71008392C7 /* Assets.xcassets */; };
 		F03657AC248C0D71008392C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03657AB248C0D71008392C7 /* Preview Assets.xcassets */; };
 		F03657AF248C0D71008392C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03657AD248C0D71008392C7 /* LaunchScreen.storyboard */; };
+		F098D4EE248C0EB300DA6909 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D4ED248C0EB300DA6909 /* SetGame.swift */; };
+		F098D4F1248C0FD100DA6909 /* CardSetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098D4F0248C0FD100DA6909 /* CardSetGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00597D9248CF24600EE78A6 /* SetGameCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameCardBackView.swift; sourceTree = "<group>"; };
+		F00597DD248D13FD00EE78A6 /* SetGameCardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameCardFrontView.swift; sourceTree = "<group>"; };
+		F00597E1248D168F00EE78A6 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
+		F00597E3248D188F00EE78A6 /* View+AsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AsCard.swift"; sourceTree = "<group>"; };
+		F01F5F1C248CCF3A00D4940F /* SetGameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameCardView.swift; sourceTree = "<group>"; };
 		F036579F248C0D70008392C7 /* SetGameSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGameSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03657A2248C0D70008392C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F03657A4248C0D70008392C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F03657A6248C0D70008392C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F03657A6248C0D70008392C7 /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
 		F03657A8248C0D71008392C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F03657AB248C0D71008392C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F03657AE248C0D71008392C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F03657B0248C0D71008392C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F098D4ED248C0EB300DA6909 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		F098D4F0248C0FD100DA6909 /* CardSetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +70,11 @@
 		F03657A1248C0D70008392C7 /* SetGameSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F098D4EB248C0E6B00DA6909 /* Model */,
+				F098D4EF248C0F9C00DA6909 /* ModelView */,
+				F098D4EC248C0E7300DA6909 /* Views */,
 				F03657A2248C0D70008392C7 /* AppDelegate.swift */,
 				F03657A4248C0D70008392C7 /* SceneDelegate.swift */,
-				F03657A6248C0D70008392C7 /* ContentView.swift */,
 				F03657A8248C0D71008392C7 /* Assets.xcassets */,
 				F03657AD248C0D71008392C7 /* LaunchScreen.storyboard */,
 				F03657B0248C0D71008392C7 /* Info.plist */,
@@ -73,6 +89,35 @@
 				F03657AB248C0D71008392C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F098D4EB248C0E6B00DA6909 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F098D4ED248C0EB300DA6909 /* SetGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F098D4EC248C0E7300DA6909 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F03657A6248C0D70008392C7 /* SetGameView.swift */,
+				F01F5F1C248CCF3A00D4940F /* SetGameCardView.swift */,
+				F00597DD248D13FD00EE78A6 /* SetGameCardFrontView.swift */,
+				F00597D9248CF24600EE78A6 /* SetGameCardBackView.swift */,
+				F00597E1248D168F00EE78A6 /* CardViewModifier.swift */,
+				F00597E3248D188F00EE78A6 /* View+AsCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F098D4EF248C0F9C00DA6909 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F098D4F0248C0FD100DA6909 /* CardSetGame.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,7 +156,7 @@
 				};
 			};
 			buildConfigurationList = F036579A248C0D70008392C7 /* Build configuration list for PBXProject "SetGameSwiftUI" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -148,7 +193,14 @@
 			files = (
 				F03657A3248C0D70008392C7 /* AppDelegate.swift in Sources */,
 				F03657A5248C0D70008392C7 /* SceneDelegate.swift in Sources */,
-				F03657A7248C0D70008392C7 /* ContentView.swift in Sources */,
+				F098D4F1248C0FD100DA6909 /* CardSetGame.swift in Sources */,
+				F098D4EE248C0EB300DA6909 /* SetGame.swift in Sources */,
+				F00597DE248D13FD00EE78A6 /* SetGameCardFrontView.swift in Sources */,
+				F00597DA248CF24600EE78A6 /* SetGameCardBackView.swift in Sources */,
+				F00597E4248D188F00EE78A6 /* View+AsCard.swift in Sources */,
+				F01F5F1D248CCF3A00D4940F /* SetGameCardView.swift in Sources */,
+				F00597E2248D168F00EE78A6 /* CardViewModifier.swift in Sources */,
+				F03657A7248C0D70008392C7 /* SetGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +341,7 @@
 				DEVELOPMENT_TEAM = Q2857NZSUT;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SetGameSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +362,7 @@
 				DEVELOPMENT_TEAM = Q2857NZSUT;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SetGameSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
