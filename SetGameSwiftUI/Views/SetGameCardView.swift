@@ -31,6 +31,7 @@ struct CardView_Previews: PreviewProvider {
         Group {
             SetGameCardView(isFaceUp: true)
             SetGameCardView(isFaceUp: true).frame(width: 100, height: 130, alignment: .center)
+            SetGameCardView(isFaceUp: true).frame(width: 200, height: 250, alignment: .center)
             SetGameCardView(isFaceUp: false)
             SetGameCardView(isFaceUp: false).frame(width: 100, height: 130, alignment: .center)
         }

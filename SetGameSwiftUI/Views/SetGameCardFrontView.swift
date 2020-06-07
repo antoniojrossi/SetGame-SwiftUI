@@ -21,7 +21,7 @@ struct SetGameCardFrontView: View {
             
             Diamond().foregroundColor(Color.green)
             Capsule().stroke(Color.red, lineWidth: 5)
-            Squiggle().mask(StripedPattern(numberOfStripes: 50)).overlay(Squiggle().stroke(Color.purple, lineWidth: 5)).foregroundColor(Color.purple)
+            Squiggle().mask(StripedPattern(numberOfStripes: 20)).overlay(Squiggle().stroke(Color.purple, lineWidth: 5)).foregroundColor(Color.purple)
         }
     }
 }
