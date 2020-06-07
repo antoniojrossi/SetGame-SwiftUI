@@ -9,13 +9,18 @@
 import SwiftUI
 
 struct SetGameCardBackView: View {
-    var backgroundColor = Color.clear
     
+    // MARK: Properties
+    
+    var backgroundColor = Color.clear
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
         }
     }
+    
+    
+    // MARK: Functions
     
     private func body(for size: CGSize) -> some View {
         VStack {
@@ -52,7 +57,7 @@ struct SetGameCardBackView: View {
     }
     
     // MARK: Drawing Constants
-
+    
     private let squareColor = Color.white
     private let fontColor = Color.black
     private func horizontalSpacing(for size: CGSize) -> CGFloat { size.width / 75 }

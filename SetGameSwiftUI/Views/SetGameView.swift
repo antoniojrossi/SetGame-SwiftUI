@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct SetGameView: View {
-    @ObservedObject var game: CardSetGame
+    
+    // MARK: Properties
 
+    @ObservedObject var game: CardSetGame
     var body: some View {
-        Text(game.name)
+        SetGameCardView(isFaceUp: false)
     }
 }
 

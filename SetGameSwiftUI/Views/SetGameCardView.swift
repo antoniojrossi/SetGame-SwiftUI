@@ -9,12 +9,17 @@
 import SwiftUI
 
 struct SetGameCardView: View {
+    
+    // MARK: Properties
+    
     var isFaceUp: Bool = false
     var body: some View {
         GeometryReader { geometry  in
             self.body(for: geometry.size);
         }
     }
+    
+    // MARK: Functions
     
     func body(for size: CGSize) -> some View {
         SetGameCardFrontView().asCard(isFaceUp: isFaceUp, cardBack: SetGameCardBackView())

@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct CardViewModifier<BackContent>: ViewModifier where BackContent: View {
+    
+    // MARK: Properties
+    
     var isFaceUp = false
     var cardBack: BackContent
+    var cardAspectRatio: CGFloat = 2/3
+    
+    // MARK: Functions
+    
     func body(content: Content) -> some View {
         GeometryReader { geometry in
             self.body(content, for: geometry.size)
@@ -34,9 +41,9 @@ struct CardViewModifier<BackContent>: ViewModifier where BackContent: View {
     }
     
     // MARK: Drawing constants
+    
     private let faceUpBackgroundColor = Color.white
     private let faceDownBackgroundColor = Color(red: 0.694, green: 0.612, blue: 0.851)
-    private let cardAspectRatio: CGFloat = 3/5
     private func cornerRadius(for size: CGSize) -> CGFloat {
         size.width / 80
     }
