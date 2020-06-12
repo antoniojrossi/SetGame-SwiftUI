@@ -28,11 +28,7 @@ struct CardView<BackContent>: View where BackContent: View{
     
     func body(for size: CGSize) -> some View {
         ZStack{
-            RoundedRectangle(cornerRadius: cornerRadius(for: size))
-            .fill(isFaceUp ? faceUpBackgroundColor : faceDownBackgroundColor)
-            .shadow(radius: shadowCornerRadius(for: size),
-                    x: shadowOffset(for: size),
-                    y: shadowOffset(for: size))
+            CardBackground(isFaceUp: isFaceUp)
             Group {
                 if isFaceUp {
                     VStack {
@@ -75,17 +71,7 @@ struct CardView<BackContent>: View where BackContent: View{
     }
     var aspectRatio: CGFloat = 4/2
     var cardAspectRatio: CGFloat = 2/3
-    private let faceUpBackgroundColor = Color.white
-    private let faceDownBackgroundColor = Color(red: 0.694, green: 0.612, blue: 0.851)
-    private func cornerRadius(for size: CGSize) -> CGFloat {
-        size.width / 80
-    }
-    private func shadowCornerRadius(for size: CGSize) -> CGFloat {
-        size.width / 80
-    }
-    private func shadowOffset(for size: CGSize) -> CGFloat {
-        size.width / 100
-    }
+    
 }
 
 struct CardView_Previews: PreviewProvider {
@@ -104,7 +90,24 @@ struct CardView_Previews: PreviewProvider {
                 shape: .squiggle,
                 color: .green,
                 shading: .striped,
+                isFaceUp: false,
+                backView: CardBackView()
+            )
+            CardView(
+                numberOfFigures: .two,
+                shape: .squiggle,
+                color: .green,
+                shading: .striped,
                 isFaceUp: true,
+                backView: CardBackView()
+            )
+                .frame(width: 200, height: 250, alignment: .center)
+            CardView(
+                numberOfFigures: .two,
+                shape: .squiggle,
+                color: .green,
+                shading: .striped,
+                isFaceUp: false,
                 backView: CardBackView()
             )
                 .frame(width: 200, height: 250, alignment: .center)
@@ -115,7 +118,17 @@ struct CardView_Previews: PreviewProvider {
                 shading: .striped,
                 isFaceUp: true,
                 backView: CardBackView()
-            ).frame(width: 100, height: 130, alignment: .center)
+            )
+                .frame(width: 100, height: 130, alignment: .center)
+            CardView(
+                numberOfFigures: .two,
+                shape: .squiggle,
+                color: .green,
+                shading: .striped,
+                isFaceUp: false,
+                backView: CardBackView()
+            )
+                .frame(width: 100, height: 130, alignment: .center)
         }
     }
 }

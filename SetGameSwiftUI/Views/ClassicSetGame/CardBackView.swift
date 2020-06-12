@@ -19,7 +19,6 @@ struct CardBackView: View {
         }
     }
     
-    
     // MARK: Functions
     
     private func body(for size: CGSize) -> some View {
