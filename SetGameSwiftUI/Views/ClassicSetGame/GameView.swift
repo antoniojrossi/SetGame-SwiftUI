@@ -18,8 +18,9 @@ struct GameView: View {
             numberOfFigures: .three,
             shape: .squiggle,
             color: .purple,
-            shading: .striped)
-        .asCard(isFaceUp: true, cardBack: CardBackView())
+            shading: .striped,
+            isFaceUp: true,
+            backView: CardBackView())
     }
 }
 

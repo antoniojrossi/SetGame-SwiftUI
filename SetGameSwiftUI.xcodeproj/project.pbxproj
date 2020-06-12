@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F00597DA248CF24600EE78A6 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597D9248CF24600EE78A6 /* CardBackView.swift */; };
-		F00597E2248D168F00EE78A6 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597E1248D168F00EE78A6 /* CardViewModifier.swift */; };
-		F00597E4248D188F00EE78A6 /* View+AsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597E3248D188F00EE78A6 /* View+AsCard.swift */; };
 		F015AFF92493D35700712F03 /* Oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015AFF82493D35700712F03 /* Oval.swift */; };
 		F015AFFF2493ECC500712F03 /* FigureColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015AFFE2493ECC500712F03 /* FigureColorModifier.swift */; };
 		F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B0002493EDF400712F03 /* FigureShapeView.swift */; };
@@ -30,8 +28,6 @@
 
 /* Begin PBXFileReference section */
 		F00597D9248CF24600EE78A6 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
-		F00597E1248D168F00EE78A6 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
-		F00597E3248D188F00EE78A6 /* View+AsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AsCard.swift"; sourceTree = "<group>"; };
 		F015AFF82493D35700712F03 /* Oval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oval.swift; sourceTree = "<group>"; };
 		F015AFFE2493ECC500712F03 /* FigureColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureColorModifier.swift; sourceTree = "<group>"; };
 		F015B0002493EDF400712F03 /* FigureShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureShapeView.swift; sourceTree = "<group>"; };
@@ -69,8 +65,6 @@
 				F03657A6248C0D70008392C7 /* GameView.swift */,
 				F01F5F1C248CCF3A00D4940F /* CardView.swift */,
 				F00597D9248CF24600EE78A6 /* CardBackView.swift */,
-				F00597E1248D168F00EE78A6 /* CardViewModifier.swift */,
-				F00597E3248D188F00EE78A6 /* View+AsCard.swift */,
 				F015AFFE2493ECC500712F03 /* FigureColorModifier.swift */,
 				F015B0042493FE4900712F03 /* FigureShadingModifier.swift */,
 				F015B0002493EDF400712F03 /* FigureShapeView.swift */,
@@ -233,11 +227,9 @@
 				F015AFFF2493ECC500712F03 /* FigureColorModifier.swift in Sources */,
 				F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */,
 				F015AFF92493D35700712F03 /* Oval.swift in Sources */,
-				F00597E4248D188F00EE78A6 /* View+AsCard.swift in Sources */,
 				F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */,
 				F01F5F1D248CCF3A00D4940F /* CardView.swift in Sources */,
 				F0A83D5C248D40ED00EBDF56 /* StripedPattern.swift in Sources */,
-				F00597E2248D168F00EE78A6 /* CardViewModifier.swift in Sources */,
 				F03657A7248C0D70008392C7 /* GameView.swift in Sources */,
 				F0A83D56248D325800EBDF56 /* Diamond.swift in Sources */,
 				F015B0052493FE4900712F03 /* FigureShadingModifier.swift in Sources */,
