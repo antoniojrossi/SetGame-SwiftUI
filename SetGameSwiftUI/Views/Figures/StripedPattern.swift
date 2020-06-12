@@ -10,10 +10,10 @@ import SwiftUI
 
 struct StripedPattern: Shape {
     
-    var numberOfStripes: Int
+    var stripeWidth: Int
     
     func path(in rect: CGRect) -> Path {
-        let stripeWidth = Int(rect.width) / numberOfStripes
+        let numberOfStripes = Int(rect.width) / stripeWidth
         var path = Path()
         path.move(to: rect.origin)
         for index in 0...numberOfStripes {
@@ -31,6 +31,6 @@ struct StripedPattern: Shape {
 
 struct Striped_Previews: PreviewProvider {
     static var previews: some View {
-        StripedPattern(numberOfStripes: 40)
+        StripedPattern(stripeWidth: 5)
     }
 }

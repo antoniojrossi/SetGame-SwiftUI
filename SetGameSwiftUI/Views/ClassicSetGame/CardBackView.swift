@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SetGameCardBackView: View {
+struct CardBackView: View {
     
     // MARK: Properties
     
@@ -74,8 +74,8 @@ struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
         let color = Color(red: 0.694, green: 0.612, blue: 0.851)
         return Group {
-            SetGameCardBackView(backgroundColor: color)
-            SetGameCardBackView(backgroundColor: color).frame(width: 50, height: 75, alignment: .center)
+            CardBackView(backgroundColor: color)
+            CardBackView(backgroundColor: color).frame(width: 50, height: 75, alignment: .center)
         }
     }
 }
