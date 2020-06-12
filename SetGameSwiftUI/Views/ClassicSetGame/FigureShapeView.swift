@@ -11,6 +11,7 @@ import SwiftUI
 struct FigureShapeView: Shape {
     
     var shape: FigureShape
+    
     func path(in rect: CGRect) -> Path {
         switch shape {
         case .diamond:

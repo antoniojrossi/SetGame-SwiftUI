@@ -13,6 +13,8 @@
 		F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B0002493EDF400712F03 /* FigureShapeView.swift */; };
 		F015B0052493FE4900712F03 /* FigureShadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B0042493FE4900712F03 /* FigureShadingModifier.swift */; };
 		F015B00B2494103000712F03 /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00A2494103000712F03 /* CardBackground.swift */; };
+		F015B00D2494181E00712F03 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00C2494181E00712F03 /* CardFrontView.swift */; };
+		F015B00F2494193300712F03 /* FigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00E2494193300712F03 /* FigureView.swift */; };
 		F01F5F1D248CCF3A00D4940F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01F5F1C248CCF3A00D4940F /* CardView.swift */; };
 		F03657A3248C0D70008392C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A2248C0D70008392C7 /* AppDelegate.swift */; };
 		F03657A5248C0D70008392C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A4248C0D70008392C7 /* SceneDelegate.swift */; };
@@ -34,6 +36,8 @@
 		F015B0002493EDF400712F03 /* FigureShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureShapeView.swift; sourceTree = "<group>"; };
 		F015B0042493FE4900712F03 /* FigureShadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureShadingModifier.swift; sourceTree = "<group>"; };
 		F015B00A2494103000712F03 /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
+		F015B00C2494181E00712F03 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
+		F015B00E2494193300712F03 /* FigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureView.swift; sourceTree = "<group>"; };
 		F01F5F1C248CCF3A00D4940F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F036579F248C0D70008392C7 /* SetGameSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGameSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03657A2248C0D70008392C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +70,10 @@
 			children = (
 				F03657A6248C0D70008392C7 /* GameView.swift */,
 				F01F5F1C248CCF3A00D4940F /* CardView.swift */,
+				F015B00C2494181E00712F03 /* CardFrontView.swift */,
 				F00597D9248CF24600EE78A6 /* CardBackView.swift */,
 				F015B00A2494103000712F03 /* CardBackground.swift */,
+				F015B00E2494193300712F03 /* FigureView.swift */,
 				F015AFFE2493ECC500712F03 /* FigureColorModifier.swift */,
 				F015B0042493FE4900712F03 /* FigureShadingModifier.swift */,
 				F015B0002493EDF400712F03 /* FigureShapeView.swift */,
@@ -228,12 +234,14 @@
 				F098D4EE248C0EB300DA6909 /* SetGame.swift in Sources */,
 				F00597DA248CF24600EE78A6 /* CardBackView.swift in Sources */,
 				F015AFFF2493ECC500712F03 /* FigureColorModifier.swift in Sources */,
+				F015B00F2494193300712F03 /* FigureView.swift in Sources */,
 				F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */,
 				F015AFF92493D35700712F03 /* Oval.swift in Sources */,
 				F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */,
 				F015B00B2494103000712F03 /* CardBackground.swift in Sources */,
 				F01F5F1D248CCF3A00D4940F /* CardView.swift in Sources */,
 				F0A83D5C248D40ED00EBDF56 /* StripedPattern.swift in Sources */,
+				F015B00D2494181E00712F03 /* CardFrontView.swift in Sources */,
 				F03657A7248C0D70008392C7 /* GameView.swift in Sources */,
 				F0A83D56248D325800EBDF56 /* Diamond.swift in Sources */,
 				F015B0052493FE4900712F03 /* FigureShadingModifier.swift in Sources */,

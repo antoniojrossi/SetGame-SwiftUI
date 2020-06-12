@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FigureColorModifier: ViewModifier {
+    
     var figureColor: FigureColor
     
     func body(content: Content) -> some View {

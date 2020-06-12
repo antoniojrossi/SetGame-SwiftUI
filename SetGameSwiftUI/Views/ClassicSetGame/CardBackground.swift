@@ -20,6 +20,7 @@ struct CardBackground: View {
     }
     
     // MARK: Functions
+    
     private func body(for size: CGSize) -> some View {
         RoundedRectangle(cornerRadius: cornerRadius(for: size))
             .fill(isFaceUp ? faceUpBackgroundColor : faceDownBackgroundColor)

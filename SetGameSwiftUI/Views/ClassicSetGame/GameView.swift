@@ -15,12 +15,12 @@ struct GameView: View {
     @ObservedObject var game: CardSetGame
     var body: some View {
         CardView(
-            numberOfFigures: .three,
+            numberOfFigures: .one,
             shape: .squiggle,
             color: .purple,
             shading: .striped,
-            isFaceUp: true,
-            backView: CardBackView())
+            isFaceUp: true
+        )
     }
 }
 

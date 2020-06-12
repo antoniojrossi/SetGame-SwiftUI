@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CardView<BackContent>: View where BackContent: View{
+struct CardView: View {
     
     // MARK: Properties
     var numberOfFigures: NumberOfFigures
@@ -16,7 +16,6 @@ struct CardView<BackContent>: View where BackContent: View{
     var color: FigureColor
     var shading: FigureShading
     var isFaceUp = true
-    var backView: BackContent
     
     var body: some View {
         GeometryReader { geometry  in
@@ -31,25 +30,13 @@ struct CardView<BackContent>: View where BackContent: View{
             CardBackground(isFaceUp: isFaceUp)
             Group {
                 if isFaceUp {
-                    VStack {
-                        Spacer()
-                        ForEach(0..<self.numberOfFigures.rawValue) {_ in
-                            ZStack {
-                                FigureShapeView(shape: self.shape)
-                                    .shading(to: self.shading, stripeWidth: self.shadingLineWidth(for: size))
-                                    .colored(to: self.color)
-                                FigureShapeView(shape: self.shape)
-                                    .stroke(lineWidth: self.borderLineWidth(for: size))
-                                    .colored(to: self.color)
-                            }
-                            .padding(self.padding(for: size))
-                            .frame(height: self.height(for: size))
-                            .aspectRatio(self.aspectRatio, contentMode: .fit)
-                        }
-                        Spacer()
-                    }
+                    CardFrontView(
+                        numberOfFigures: numberOfFigures,
+                        shape: shape,
+                        color: color,
+                        shading: shading)
                 } else {
-                    backView
+                    CardBackView()
                 }
             }
         }
@@ -57,19 +44,6 @@ struct CardView<BackContent>: View where BackContent: View{
     }
     
     // MARK: Drawing constants
-    func borderLineWidth(for size: CGSize) -> CGFloat {
-        size.width / 100
-    }
-    func shadingLineWidth(for size: CGSize) -> Int {
-        Int(size.width) / 100
-    }
-    func padding(for size: CGSize) -> CGFloat {
-        size.height / 50
-    }
-    func height(for size: CGSize) -> CGFloat {
-        size.height / 4
-    }
-    var aspectRatio: CGFloat = 4/2
     var cardAspectRatio: CGFloat = 2/3
     
 }
@@ -82,24 +56,21 @@ struct CardView_Previews: PreviewProvider {
                 shape: .squiggle,
                 color: .green,
                 shading: .striped,
-                isFaceUp: true,
-                backView: CardBackView()
+                isFaceUp: true
             )
             CardView(
                 numberOfFigures: .two,
                 shape: .squiggle,
                 color: .green,
                 shading: .striped,
-                isFaceUp: false,
-                backView: CardBackView()
+                isFaceUp: false
             )
             CardView(
-                numberOfFigures: .two,
-                shape: .squiggle,
-                color: .green,
-                shading: .striped,
-                isFaceUp: true,
-                backView: CardBackView()
+                numberOfFigures: .one,
+                shape: .oval,
+                color: .purple,
+                shading: .solid,
+                isFaceUp: true
             )
                 .frame(width: 200, height: 250, alignment: .center)
             CardView(
@@ -107,17 +78,15 @@ struct CardView_Previews: PreviewProvider {
                 shape: .squiggle,
                 color: .green,
                 shading: .striped,
-                isFaceUp: false,
-                backView: CardBackView()
+                isFaceUp: false
             )
                 .frame(width: 200, height: 250, alignment: .center)
             CardView(
-                numberOfFigures: .two,
-                shape: .squiggle,
-                color: .green,
-                shading: .striped,
-                isFaceUp: true,
-                backView: CardBackView()
+                numberOfFigures: .three,
+                shape: .diamond,
+                color: .red,
+                shading: .open,
+                isFaceUp: true
             )
                 .frame(width: 100, height: 130, alignment: .center)
             CardView(
@@ -125,8 +94,7 @@ struct CardView_Previews: PreviewProvider {
                 shape: .squiggle,
                 color: .green,
                 shading: .striped,
-                isFaceUp: false,
-                backView: CardBackView()
+                isFaceUp: false
             )
                 .frame(width: 100, height: 130, alignment: .center)
         }

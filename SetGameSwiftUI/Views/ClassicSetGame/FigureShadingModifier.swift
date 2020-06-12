@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct FigureShadingModifier: ViewModifier {
+    
     var shading: FigureShading
     var stripeWidth = 0
+    
     func body(content: Content) -> some View {
         Group {
             if shading == .open {
