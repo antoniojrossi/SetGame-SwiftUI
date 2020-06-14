@@ -15,7 +15,7 @@ class CardSetGame: ObservableObject {
         game = SetGame(playFigures: playFigures)
     }
     
-    // MARK: - Access to the model
+    // MARK: Access to the model
     var deck: [Card] {
         game.deck
     }
@@ -24,5 +24,11 @@ class CardSetGame: ObservableObject {
     }
     var playingCards: [Card] {
         game.playingCards
+    }
+    
+    // MARK: Intents
+    
+    func dealCards() {
+        game.dealCards()
     }
 }

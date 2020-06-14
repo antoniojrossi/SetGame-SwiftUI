@@ -17,10 +17,16 @@ struct SetGame {
     init(playFigures: Array<PlayFigure>) {
         deck = playFigures.map { Card(isFaceUp: false, figure: $0) }.shuffled()
         discardPile = []
-        playingCards = Array(deck.prefix(initialNumberOfPlayingCards))
-        for index in playingCards.indices {
-            playingCards[index].isFaceUp = true
+        playingCards = []
+        dealCards(initialNumberOfPlayingCards)
+    }
+    
+    mutating func dealCards(_ numberOfCards: Int = 3) {
+        var newPlayingCards = deck.prefix(numberOfCards)
+        for index in newPlayingCards.indices {
+            newPlayingCards[index].isFaceUp = true
         }
-        deck = Array(deck.dropFirst(initialNumberOfPlayingCards))
+        playingCards.append(contentsOf: newPlayingCards)
+        deck = Array(deck.dropFirst(numberOfCards))
     }
 }

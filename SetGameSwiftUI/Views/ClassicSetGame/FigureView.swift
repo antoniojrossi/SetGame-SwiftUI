@@ -26,7 +26,7 @@ struct FigureView: View {
     func body(for size: CGSize) -> some View {
         ZStack {
             FigureShapeView(shape: self.shape)
-                .shading(to: self.shading, stripeWidth: self.shadingLineWidth(for: size))
+                .shading(to: self.shading, stripeWidth: self.stripeWidth(for: size))
                 .colored(to: self.color)
             FigureShapeView(shape: self.shape)
                 .stroke(lineWidth: self.borderLineWidth(for: size))
@@ -39,8 +39,8 @@ struct FigureView: View {
     func borderLineWidth(for size: CGSize) -> CGFloat {
         max(1, size.width / 50)
     }
-    func shadingLineWidth(for size: CGSize) -> Int {
-        max(1, Int(size.width) / 25)
+    func stripeWidth(for size: CGSize) -> Int {
+        max(1, Int(size.width) / 20)
     }
 }
 

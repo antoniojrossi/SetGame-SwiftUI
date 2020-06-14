@@ -29,7 +29,10 @@ struct GameView: View {
             Divider()
             DeckView(deck: game.deck)
                 .padding(5)
-                .frame(width: size.width, height: size.height / 8, alignment: .leading)
+                .frame(width: size.width, height: size.height / 6, alignment: .leading)
+                .onTapGesture {
+                    self.game.dealCards()
+            }
         }
     }
     

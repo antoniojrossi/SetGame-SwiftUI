@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Identifiable, CustomStringConvertible{
+struct Card: Identifiable, CustomStringConvertible {
     // MARK: Properties
     let id = UUID()
     var isFaceUp = false
