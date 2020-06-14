@@ -37,10 +37,10 @@ struct FigureView: View {
     // MARK: Drawing Constants
     
     func borderLineWidth(for size: CGSize) -> CGFloat {
-        size.width / 100
+        max(1, size.width / 50)
     }
     func shadingLineWidth(for size: CGSize) -> Int {
-        Int(size.width) / 75
+        max(1, Int(size.width) / 25)
     }
 }
 

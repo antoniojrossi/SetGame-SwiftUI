@@ -19,4 +19,10 @@ class CardSetGame: ObservableObject {
     var deck: [Card] {
         game.deck
     }
+    var discardPile: [Card] {
+        game.discardPile
+    }
+    var playingCards: [Card] {
+        game.playingCards
+    }
 }

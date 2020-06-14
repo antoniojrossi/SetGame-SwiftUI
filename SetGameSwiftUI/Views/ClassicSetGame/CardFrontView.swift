@@ -25,30 +25,24 @@ struct CardFrontView: View {
     
     func body(for size: CGSize) -> some View {
         VStack {
-            Spacer()
+            Spacer(minLength: 1)
             ForEach(0..<self.numberOfFigures.rawValue) {_ in
                 FigureView(shape: self.shape, color: self.color, shading: self.shading)
-                    .padding(self.padding(for: size))
                     .frame(height: self.height(for: size))
-                    .aspectRatio(self.aspectRatio, contentMode: .fit)
+                    .aspectRatio(4/2, contentMode: .fit)
             }
-            Spacer()
+            Spacer(minLength: 1)
         }
     }
     
     // MARK: Drawing Constants
-    
-    func padding(for size: CGSize) -> CGFloat {
-        size.height / 50
-    }
     func height(for size: CGSize) -> CGFloat {
         size.height / 4
     }
-    var aspectRatio: CGFloat = 4/2
 }
 
 struct CardFrontView_Previews: PreviewProvider {
     static var previews: some View {
-        CardFrontView(numberOfFigures: .one, shape: .squiggle, color: .purple, shading: .striped)
+        CardFrontView(numberOfFigures: .three, shape: .squiggle, color: .purple, shading: .striped)
     }
 }

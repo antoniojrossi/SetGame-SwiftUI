@@ -31,7 +31,8 @@ struct CardView: View {
                         numberOfFigures: playFigure.numberOfFigures,
                         shape: playFigure.shape,
                         color: playFigure.color,
-                        shading: playFigure.shading)
+                        shading: playFigure.shading
+                    ).padding([.top, .bottom], self.padding(for: size))
                 } else {
                     CardBackView()
                 }
@@ -42,6 +43,9 @@ struct CardView: View {
     
     // MARK: Drawing constants
     var cardAspectRatio: CGFloat = 2/3
+    func padding(for size: CGSize) -> CGFloat {
+        return size.height / 10
+    }
     
 }
 

@@ -14,7 +14,27 @@ struct GameView: View {
     @ObservedObject var game: CardSetGame
     
     var body: some View {
-        DeckView(deck: game.deck)
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
+        }
+    }
+    
+    func body(for size: CGSize) -> some View {
+        VStack {
+            Spacer()
+            Grid(game.playingCards) { card in
+                CardView(playFigure: card.figure as! ClassicPlayFigure, isFaceUp: card.isFaceUp)
+                    .padding(self.padding(for: size))
+            }
+            Divider()
+            DeckView(deck: game.deck)
+                .padding(5)
+                .frame(width: size.width, height: size.height / 8, alignment: .leading)
+        }
+    }
+    
+    func padding(for size: CGSize) -> CGFloat {
+        size.width / 100
     }
 }
 

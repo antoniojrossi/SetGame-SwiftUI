@@ -33,19 +33,12 @@ struct CardBackground: View {
     
     private let faceUpBackgroundColor = Color.white
     private let faceDownBackgroundColor = Color(red: 0.694, green: 0.612, blue: 0.851)
-    private let bordercolor = Color(red: 0.5, green: 0.5, blue: 0.5, opacity: 0.25)
+    private let bordercolor = Color(red: 0.25, green: 0.25, blue: 0.25, opacity: 0.25)
     private func cornerRadius(for size: CGSize) -> CGFloat {
-        size.width / 80
+        size.width / 20
     }
     private func borderWidth(for size: CGSize) -> CGFloat {
-        size.width / 180
-    }
-    
-    private func shadowCornerRadius(for size: CGSize) -> CGFloat {
-        size.width / 80
-    }
-    private func shadowOffset(for size: CGSize) -> CGFloat {
-        size.width / 100
+        max(1, size.width / 180)
     }
 }
 

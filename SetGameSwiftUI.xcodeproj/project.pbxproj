@@ -31,6 +31,9 @@
 		F0A83D56248D325800EBDF56 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A83D55248D325800EBDF56 /* Diamond.swift */; };
 		F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A83D59248D3E7600EBDF56 /* Squiggle.swift */; };
 		F0A83D5C248D40ED00EBDF56 /* StripedPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A83D5B248D40ED00EBDF56 /* StripedPattern.swift */; };
+		F0D548D92496364A00E245D4 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D548D82496364A00E245D4 /* Grid.swift */; };
+		F0D548DB2496366000E245D4 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D548DA2496366000E245D4 /* GridLayout.swift */; };
+		F0D548DD2496368F00E245D4 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D548DC2496368F00E245D4 /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		F0A83D55248D325800EBDF56 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		F0A83D59248D3E7600EBDF56 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
 		F0A83D5B248D40ED00EBDF56 /* StripedPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedPattern.swift; sourceTree = "<group>"; };
+		F0D548D82496364A00E245D4 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		F0D548DA2496366000E245D4 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		F0D548DC2496368F00E245D4 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		F03657A1248C0D70008392C7 /* SetGameSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F0D548DE249636A200E245D4 /* Extensions */,
 				F098D4EB248C0E6B00DA6909 /* Model */,
 				F098D4EF248C0F9C00DA6909 /* ModelView */,
 				F098D4EC248C0E7300DA6909 /* Views */,
@@ -144,6 +151,8 @@
 		F098D4EC248C0E7300DA6909 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0D548D82496364A00E245D4 /* Grid.swift */,
+				F0D548DA2496366000E245D4 /* GridLayout.swift */,
 				F015AFF12493BD7400712F03 /* ClassicSetGame */,
 				F0A83D54248D320600EBDF56 /* Figures */,
 			);
@@ -167,6 +176,14 @@
 				F0A83D5B248D40ED00EBDF56 /* StripedPattern.swift */,
 			);
 			path = Figures;
+			sourceTree = "<group>";
+		};
+		F0D548DE249636A200E245D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0D548DC2496368F00E245D4 /* Array.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,16 +262,19 @@
 				F02C970B249607E700FF0DE2 /* ClassicPlayFigure.swift in Sources */,
 				F03657A3248C0D70008392C7 /* AppDelegate.swift in Sources */,
 				F03657A5248C0D70008392C7 /* SceneDelegate.swift in Sources */,
+				F0D548DD2496368F00E245D4 /* Array.swift in Sources */,
 				F098D4F1248C0FD100DA6909 /* CardSetGame.swift in Sources */,
 				F098D4EE248C0EB300DA6909 /* SetGame.swift in Sources */,
 				F00597DA248CF24600EE78A6 /* CardBackView.swift in Sources */,
 				F02C970F24960FEF00FF0DE2 /* Card.swift in Sources */,
 				F015AFFF2493ECC500712F03 /* FigureColorModifier.swift in Sources */,
+				F0D548DB2496366000E245D4 /* GridLayout.swift in Sources */,
 				F015B00F2494193300712F03 /* FigureView.swift in Sources */,
 				F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */,
 				F015AFF92493D35700712F03 /* Oval.swift in Sources */,
 				F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */,
 				F015B00B2494103000712F03 /* CardBackground.swift in Sources */,
+				F0D548D92496364A00E245D4 /* Grid.swift in Sources */,
 				F01F5F1D248CCF3A00D4940F /* CardView.swift in Sources */,
 				F0A83D5C248D40ED00EBDF56 /* StripedPattern.swift in Sources */,
 				F015B00D2494181E00712F03 /* CardFrontView.swift in Sources */,

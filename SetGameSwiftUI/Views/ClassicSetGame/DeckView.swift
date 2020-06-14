@@ -28,8 +28,7 @@ struct DeckView: View {
                     playFigure: card.figure as! ClassicPlayFigure,
                     isFaceUp: card.isFaceUp
                 )
-                .offset(self.offset(for: size))
-                    .rotationEffect(self.randomAngle(for: size))
+                .rotationEffect(self.randomAngle(for: size))
             }
         }
     }
@@ -37,9 +36,6 @@ struct DeckView: View {
     
     // MARK: Drawing constants
     
-    func offset(for size: CGSize) -> CGSize {
-        CGSize(width: CGFloat.random(in: 0...10), height: CGFloat.random(in: 0...10))
-    }
     func randomAngle(for size: CGSize) -> Angle {
         Angle.init(radians: Double.random(in: 0...0.035))
     }
