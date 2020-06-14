@@ -9,10 +9,14 @@
 import Foundation
 
 class CardSetGame: ObservableObject {
-    @Published private var game: SetGame = SetGame()
+    @Published private var game: SetGame
+    
+    init(playFigures: Array<PlayFigure> ){
+        game = SetGame(playFigures: playFigures)
+    }
     
     // MARK: - Access to the model
-    var name: String {
-        game.name
+    var deck: [Card] {
+        game.deck
     }
 }

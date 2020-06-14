@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FigureColorModifier: ViewModifier {
     
-    var figureColor: FigureColor
+    var figureColor: ClassicPlayFigure.Color
     
     func body(content: Content) -> some View {
         Group {
@@ -28,7 +28,7 @@ struct FigureColorModifier: ViewModifier {
 }
 
 extension View {
-    func colored(to figureColor: FigureColor) -> some View {
+    func colored(to figureColor: ClassicPlayFigure.Color) -> some View {
         self.modifier(FigureColorModifier(figureColor: figureColor))
     }
 }

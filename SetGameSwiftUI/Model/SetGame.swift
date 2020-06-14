@@ -9,18 +9,11 @@
 import Foundation
 
 struct SetGame {
-    var name: String = "Hola caracola"
-    private(set) var deck = [SetGameCard]()
-    private(set) var discardPile = [SetGameCard]()
-}
-
-protocol SetGameCard {
-    var feature1: SetGameCardFeature { get }
-    var feature2: SetGameCardFeature { get }
-    var feature3: SetGameCardFeature { get }
-    var feature4: SetGameCardFeature { get }
-}
-
-protocol SetGameCardFeature {
-    var value: String { get }
+    private(set) var deck: Array<Card>
+    private(set) var discardPile: Array<Card>
+    
+    init(playFigures: Array<PlayFigure>) {
+        deck = playFigures.map { Card(isFaceUp: false, figure: $0) }
+        discardPile = []
+    }
 }

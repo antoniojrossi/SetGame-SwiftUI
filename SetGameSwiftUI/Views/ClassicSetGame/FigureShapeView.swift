@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FigureShapeView: Shape {
     
-    var shape: FigureShape
+    var shape: ClassicPlayFigure.Shape
     
     func path(in rect: CGRect) -> Path {
         switch shape {

@@ -11,10 +11,10 @@ import SwiftUI
 struct CardFrontView: View {
     
     // MARK: Properties
-    var numberOfFigures: NumberOfFigures
-    var shape: FigureShape
-    var color: FigureColor
-    var shading: FigureShading
+    var numberOfFigures: ClassicPlayFigure.NumberOfFigures
+    var shape: ClassicPlayFigure.Shape
+    var color: ClassicPlayFigure.Color
+    var shading: ClassicPlayFigure.Shading
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)

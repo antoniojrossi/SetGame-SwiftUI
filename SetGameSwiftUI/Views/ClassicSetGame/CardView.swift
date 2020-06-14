@@ -11,10 +11,7 @@ import SwiftUI
 struct CardView: View {
     
     // MARK: Properties
-    var numberOfFigures: NumberOfFigures
-    var shape: FigureShape
-    var color: FigureColor
-    var shading: FigureShading
+    var playFigure: ClassicPlayFigure
     var isFaceUp = true
     
     var body: some View {
@@ -31,10 +28,10 @@ struct CardView: View {
             Group {
                 if isFaceUp {
                     CardFrontView(
-                        numberOfFigures: numberOfFigures,
-                        shape: shape,
-                        color: color,
-                        shading: shading)
+                        numberOfFigures: playFigure.numberOfFigures,
+                        shape: playFigure.shape,
+                        color: playFigure.color,
+                        shading: playFigure.shading)
                 } else {
                     CardBackView()
                 }
@@ -50,79 +47,13 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            CardView(
+        CardView(
+            playFigure: ClassicPlayFigure(
                 numberOfFigures: .two,
-                shape: .squiggle,
-                color: .green,
-                shading: .striped,
-                isFaceUp: true
-            )
-            CardView(
-                numberOfFigures: .two,
-                shape: .squiggle,
-                color: .green,
-                shading: .striped,
-                isFaceUp: false
-            )
-            CardView(
-                numberOfFigures: .one,
-                shape: .oval,
-                color: .purple,
-                shading: .solid,
-                isFaceUp: true
-            )
-                .frame(width: 200, height: 250, alignment: .center)
-            CardView(
-                numberOfFigures: .two,
-                shape: .squiggle,
-                color: .green,
-                shading: .striped,
-                isFaceUp: false
-            )
-                .frame(width: 200, height: 250, alignment: .center)
-            CardView(
-                numberOfFigures: .three,
                 shape: .diamond,
-                color: .red,
-                shading: .open,
-                isFaceUp: true
-            )
-                .frame(width: 100, height: 130, alignment: .center)
-            CardView(
-                numberOfFigures: .two,
-                shape: .squiggle,
                 color: .green,
-                shading: .striped,
-                isFaceUp: false
-            )
-                .frame(width: 100, height: 130, alignment: .center)
-        }
+                shading: .striped),
+            isFaceUp: true
+        )
     }
-}
-
-
-
-enum NumberOfFigures: Int {
-    case one = 1
-    case two
-    case three
-}
-
-enum FigureShape {
-    case diamond
-    case squiggle
-    case oval
-}
-
-enum FigureColor {
-    case red
-    case green
-    case purple
-}
-
-enum FigureShading {
-    case open
-    case solid
-    case striped
 }

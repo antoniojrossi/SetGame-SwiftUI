@@ -10,22 +10,16 @@ import SwiftUI
 
 struct GameView: View {
     
-    // MARK: Properties
-
+    // MARK: Model
     @ObservedObject var game: CardSetGame
+    
     var body: some View {
-        CardView(
-            numberOfFigures: .one,
-            shape: .squiggle,
-            color: .purple,
-            shading: .striped,
-            isFaceUp: true
-        )
+        DeckView(deck: game.deck)
     }
 }
 
 struct CardSetGameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(game: CardSetGame())
+        GameView(game: CardSetGame(playFigures: ClassicPlayFigure.all()))
     }
 }
