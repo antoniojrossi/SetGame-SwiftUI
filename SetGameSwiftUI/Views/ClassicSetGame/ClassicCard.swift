@@ -14,7 +14,7 @@ struct ClassicCard: SetCard, CustomStringConvertible {
     typealias Feature3 = Shading
     typealias Feature4 = Color
     
-    enum NumberOfFigures: Int, Equatable, CaseIterable, SetFeatureCategory {
+    enum NumberOfFigures: Int, CaseIterable, SetFeatureCategory {
         typealias Content = Self
         
         case one = 1
@@ -22,7 +22,7 @@ struct ClassicCard: SetCard, CustomStringConvertible {
         case three
     }
     
-    enum Shape: Equatable, CaseIterable, SetFeatureCategory {
+    enum Shape: CaseIterable, SetFeatureCategory {
         typealias Content = Self
 
         case diamond
@@ -30,7 +30,7 @@ struct ClassicCard: SetCard, CustomStringConvertible {
         case oval
     }
     
-    enum Shading: Equatable, CaseIterable, SetFeatureCategory {
+    enum Shading: CaseIterable, SetFeatureCategory {
         typealias Content = Self
 
         case open
@@ -38,7 +38,7 @@ struct ClassicCard: SetCard, CustomStringConvertible {
         case striped
     }
     
-    enum Color: Equatable, CaseIterable, SetFeatureCategory {
+    enum Color: CaseIterable, SetFeatureCategory {
         typealias Content = Self
 
         case red
