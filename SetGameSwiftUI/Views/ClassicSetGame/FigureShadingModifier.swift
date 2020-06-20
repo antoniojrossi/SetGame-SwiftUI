@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FigureShadingModifier: ViewModifier {
     
-    var shading: ClassicPlayFigure.Shading
+    var shading: ClassicCard.Shading
     var stripeWidth = 0
     
     func body(content: Content) -> some View {
@@ -30,7 +30,7 @@ struct FigureShadingModifier: ViewModifier {
 }
 
 extension View {
-    func shading(to figureShading: ClassicPlayFigure.Shading, stripeWidth: Int = 0) -> some View {
+    func shading(to figureShading: ClassicCard.Shading, stripeWidth: Int = 0) -> some View {
         self.modifier(FigureShadingModifier(shading: figureShading, stripeWidth: stripeWidth))
     }
 }

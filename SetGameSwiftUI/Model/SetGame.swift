@@ -8,17 +8,18 @@
 
 import Foundation
 
-struct SetGame {
+struct SetGame<Card> where Card: SetCard {
     private(set) var deck: Array<Card>
     private(set) var discardPile: Array<Card>
     private(set) var playingCards: Array<Card>
     private let initialNumberOfPlayingCards = 12
+    private let cardsPerSet = 3
     private var selectedCards: Array<Card> {
         playingCards.filter{ $0.isSelected }
     }
     
-    init(playFigures: Array<PlayFigure>) {
-        deck = playFigures.map { Card(isFaceUp: false, isSelected: false, figure: $0) }.shuffled()
+    init(cards: [Card]) {
+        deck = cards.map{ $0.facingDown.unselected }//.shuffled()
         discardPile = []
         playingCards = []
         dealCards(initialNumberOfPlayingCards)
@@ -34,24 +35,38 @@ struct SetGame {
     }
     
     mutating func choose(_ card: Card) {
-        if selectedCards.count < 3 {
+        if selectedCards.count < cardsPerSet {
             for index in playingCards.indices {
                 if playingCards[index] == card {
                     playingCards[index].isSelected = !playingCards[index].isSelected
                 }
             }
         }
-        if selectedCards.count == 3 {
-            if selectedCards[0].figure.match(with: selectedCards[1].figure, and: selectedCards[2].figure) {
-                for _ in 0...2 {
-                    discardPile.append(playingCards.remove(at: playingCards.firstIndex(of: selectedCards[0])!))
-                }
-            } else {
-                for index in playingCards.indices {
-                    if selectedCards.contains(playingCards[index]) {
-                        playingCards[index].isSelected = false
-                    }
-                }
+        isThereASet()
+    }
+    
+    private mutating func isThereASet() {
+        guard selectedCards.count == cardsPerSet else {
+            return
+        }
+        
+        if Card.isASet(card1: selectedCards[0], card2: selectedCards[1], card3: selectedCards[2]) {
+            discardSelectedCards()
+        } else {
+            unselectCards()
+        }
+    }
+    
+    private mutating func discardSelectedCards() {
+        for _ in selectedCards.indices {
+            discardPile.append(playingCards.remove(at: playingCards.firstIndex(of: selectedCards.first!)!))
+        }
+    }
+    
+    private mutating func unselectCards() {
+        for index in playingCards.indices {
+            if selectedCards.contains(playingCards[index]) {
+                playingCards[index].isSelected = false
             }
         }
     }

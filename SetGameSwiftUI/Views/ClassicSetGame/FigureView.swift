@@ -12,9 +12,9 @@ struct FigureView: View {
     
     // MARK: Properties
     
-    var shape: ClassicPlayFigure.Shape
-    var color: ClassicPlayFigure.Color
-    var shading: ClassicPlayFigure.Shading
+    var shape: ClassicCard.Shape
+    var color: ClassicCard.Color
+    var shading: ClassicCard.Shading
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)

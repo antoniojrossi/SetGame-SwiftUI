@@ -9,20 +9,20 @@
 import Foundation
 
 class CardSetGame: ObservableObject {
-    @Published private var game: SetGame
+    @Published private var game: SetGame<ClassicCard>
     
-    init(playFigures: Array<PlayFigure> ){
-        game = SetGame(playFigures: playFigures)
+    init(cards: [ClassicCard]){
+        game = SetGame(cards: cards)
     }
     
     // MARK: Access to the model
-    var deck: [Card] {
+    var deck: [ClassicCard] {
         game.deck
     }
-    var discardPile: [Card] {
+    var discardPile: [ClassicCard] {
         game.discardPile
     }
-    var playingCards: [Card] {
+    var playingCards: [ClassicCard] {
         game.playingCards
     }
     
@@ -32,7 +32,7 @@ class CardSetGame: ObservableObject {
         game.dealCards()
     }
     
-    func choose(card: Card) {
+    func choose(card: ClassicCard) {
         game.choose(card)
     }
 }

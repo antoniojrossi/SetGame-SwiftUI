@@ -12,7 +12,7 @@ struct DeckView: View {
     
     // MARK: Properties
     
-    var deck: [Card]
+    var deck: [ClassicCard]
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
@@ -24,11 +24,7 @@ struct DeckView: View {
     func body(for size: CGSize) -> some View {
         ZStack {
             ForEach(deck) { card in
-                CardView(
-                    playFigure: card.figure as! ClassicPlayFigure,
-                    isFaceUp: card.isFaceUp
-                )
-                .rotationEffect(self.randomAngle(for: size))
+                ClassicCardView(card: card).rotationEffect(self.randomAngle(for: size))
             }
         }
     }
@@ -43,6 +39,6 @@ struct DeckView: View {
 
 struct DeckView_Previews: PreviewProvider {
     static var previews: some View {
-        DeckView(deck: CardSetGame(playFigures: ClassicPlayFigure.all()).deck)
+        DeckView(deck: CardSetGame(cards: ClassicCard.generateAll()).deck)
     }
 }

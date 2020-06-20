@@ -23,10 +23,7 @@ struct GameView: View {
         VStack {
             Spacer()
             Grid(game.playingCards) { card in
-                CardView(
-                    playFigure: card.figure as! ClassicPlayFigure,
-                    isFaceUp: card.isFaceUp,
-                    isSelected: card.isSelected)
+                ClassicCardView(card: card)
                         .padding(self.padding(for: size))
                         .onTapGesture {
                             self.game.choose(card: card)
@@ -49,6 +46,6 @@ struct GameView: View {
 
 struct CardSetGameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(game: CardSetGame(playFigures: ClassicPlayFigure.all()))
+        GameView(game: CardSetGame(cards: ClassicCard.generateAll()))
     }
 }
