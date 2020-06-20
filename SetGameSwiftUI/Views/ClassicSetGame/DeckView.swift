@@ -14,26 +14,17 @@ struct DeckView: View {
     
     var deck: [ClassicCard]
     var body: some View {
-        GeometryReader { geometry in
-            self.body(for: geometry.size)
-        }
-    }
-    
-    // MARK: Functions
-    
-    func body(for size: CGSize) -> some View {
         ZStack {
             ForEach(deck) { card in
-                ClassicCardView(card: card).rotationEffect(self.randomAngle(for: size))
+                ClassicCardView(card: card).rotationEffect(self.randomAngle)
             }
         }
     }
     
-    
     // MARK: Drawing constants
     
-    func randomAngle(for size: CGSize) -> Angle {
-        Angle.init(radians: Double.random(in: 0...0.035))
+    private var randomAngle: Angle {
+        Angle.init(radians: Double.random(in: -0.035...0.035))
     }
 }
 

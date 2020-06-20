@@ -59,7 +59,7 @@ struct SetGame<Card> where Card: SetCard {
     
     private mutating func discardSelectedCards() {
         for _ in selectedCards.indices {
-            discardPile.append(playingCards.remove(at: playingCards.firstIndex(of: selectedCards.first!)!))
+            discardPile.append(playingCards.remove(at: playingCards.firstIndex(of: selectedCards.first!)!).unselected)
         }
     }
     

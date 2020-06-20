@@ -30,12 +30,17 @@ struct GameView: View {
                         }
             }.animation(.easeInOut)
             Divider()
-            DeckView(deck: game.deck)
-                .padding(5)
-                .frame(width: size.width, height: size.height / 6, alignment: .leading)
-                .onTapGesture {
-                    self.game.dealCards()
-            }.animation(.easeInOut)
+            HStack {
+                DeckView(deck: game.deck)
+                    .frame(width:size.width / 6, height: size.height / 6, alignment: .trailing)
+                    .padding([.top, .bottom])
+                    .onTapGesture {
+                        self.game.dealCards()
+                }
+                DeckView(deck: game.discardPile)
+                    .frame(width:size.width / 6, height: size.height / 6, alignment: .trailing)
+                    .padding([.top, .bottom])
+            }
         }
     }
     

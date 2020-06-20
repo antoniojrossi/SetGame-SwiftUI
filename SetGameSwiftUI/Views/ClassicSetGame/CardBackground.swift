@@ -34,7 +34,7 @@ struct CardBackground: View {
     
     // MARK: Drawing constants
     
-    private let faceUpBackgroundColor = Color(red: 0.9922, green: 0.9608, blue: 0.8745, opacity: 0.3)
+    private let faceUpBackgroundColor = Color(red: 1.0, green: 0.9764, blue: 0.9176)
     private let faceDownBackgroundColor = Color(red: 0.694, green: 0.612, blue: 0.851)
     private var borderColor: Color {
         if isSelected && isFaceUp {
