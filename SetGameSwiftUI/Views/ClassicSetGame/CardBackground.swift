@@ -27,7 +27,9 @@ struct CardBackground: View {
             .fill(isFaceUp ? faceUpBackgroundColor : faceDownBackgroundColor)
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius(for: size))
-                    .stroke(lineWidth: borderWidth(for: size)).foregroundColor(borderColor))
+                    .stroke(lineWidth: borderWidth(for: size)).foregroundColor(borderColor)
+                    .blur(radius: blurRadius(for: size))
+            )
     }
     
     // MARK: Drawing constants
@@ -47,10 +49,17 @@ struct CardBackground: View {
     private func borderWidth(for size: CGSize) -> CGFloat {
         isSelected ? max(1, size.width / 50) : max(1, size.width / 180)
     }
+    private func blurRadius(for size: CGSize) -> CGFloat {
+        isSelected ? size.width / 150 : 0
+    }
 }
 
 struct CardBackground_Previews: PreviewProvider {
     static var previews: some View {
-        CardBackground()
+        Group {
+            CardBackground(isFaceUp: true, isSelected: false)
+            CardBackground(isFaceUp: true, isSelected: true)
+            CardBackground(isFaceUp: false, isSelected: false)
+        }
     }
 }
