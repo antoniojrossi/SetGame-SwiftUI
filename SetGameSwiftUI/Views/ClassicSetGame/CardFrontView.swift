@@ -27,7 +27,7 @@ struct CardFrontView: View {
         VStack {
             Spacer(minLength: 1)
             ForEach(0..<self.numberOfFigures.rawValue) {_ in
-                FigureView(shape: self.shape, color: self.color, shading: self.shading)
+                FiguresView(shape: self.shape, color: self.color, shading: self.shading)
                     .frame(height: self.height(for: size))
                     .aspectRatio(4/2, contentMode: .fit)
             }

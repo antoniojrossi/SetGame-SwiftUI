@@ -18,7 +18,7 @@
 		F015B0052493FE4900712F03 /* FigureShadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B0042493FE4900712F03 /* FigureShadingModifier.swift */; };
 		F015B00B2494103000712F03 /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00A2494103000712F03 /* CardBackground.swift */; };
 		F015B00D2494181E00712F03 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00C2494181E00712F03 /* CardFrontView.swift */; };
-		F015B00F2494193300712F03 /* FigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00E2494193300712F03 /* FigureView.swift */; };
+		F015B00F2494193300712F03 /* FiguresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015B00E2494193300712F03 /* FiguresView.swift */; };
 		F02C971124961C8900FF0DE2 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C971024961C8900FF0DE2 /* DeckView.swift */; };
 		F03657A3248C0D70008392C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A2248C0D70008392C7 /* AppDelegate.swift */; };
 		F03657A5248C0D70008392C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03657A4248C0D70008392C7 /* SceneDelegate.swift */; };
@@ -48,7 +48,7 @@
 		F015B0042493FE4900712F03 /* FigureShadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureShadingModifier.swift; sourceTree = "<group>"; };
 		F015B00A2494103000712F03 /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		F015B00C2494181E00712F03 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
-		F015B00E2494193300712F03 /* FigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureView.swift; sourceTree = "<group>"; };
+		F015B00E2494193300712F03 /* FiguresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresView.swift; sourceTree = "<group>"; };
 		F02C971024961C8900FF0DE2 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		F036579F248C0D70008392C7 /* SetGameSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetGameSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03657A2248C0D70008392C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				F015B00C2494181E00712F03 /* CardFrontView.swift */,
 				F00597D9248CF24600EE78A6 /* CardBackView.swift */,
 				F015B00A2494103000712F03 /* CardBackground.swift */,
-				F015B00E2494193300712F03 /* FigureView.swift */,
+				F015B00E2494193300712F03 /* FiguresView.swift */,
 				F015AFFE2493ECC500712F03 /* FigureColorModifier.swift */,
 				F015B0042493FE4900712F03 /* FigureShadingModifier.swift */,
 				F015B0002493EDF400712F03 /* FigureShapeView.swift */,
@@ -269,7 +269,7 @@
 				F012BAFE249E5CF2000045EA /* ClassicCardView.swift in Sources */,
 				F015AFFF2493ECC500712F03 /* FigureColorModifier.swift in Sources */,
 				F0D548DB2496366000E245D4 /* GridLayout.swift in Sources */,
-				F015B00F2494193300712F03 /* FigureView.swift in Sources */,
+				F015B00F2494193300712F03 /* FiguresView.swift in Sources */,
 				F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */,
 				F015AFF92493D35700712F03 /* Oval.swift in Sources */,
 				F012BAF4249E3A85000045EA /* SetFeature.swift in Sources */,

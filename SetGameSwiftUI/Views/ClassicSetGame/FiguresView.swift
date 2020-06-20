@@ -1,5 +1,5 @@
 //
-//  FigureView.swift
+//  FiguresView.swift
 //  SetGameSwiftUI
 //
 //  Created by Antonio J Rossi on 12/06/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FigureView: View {
+struct FiguresView: View {
     
     // MARK: Properties
     
@@ -46,6 +46,6 @@ struct FigureView: View {
 
 struct FigureView_Previews: PreviewProvider {
     static var previews: some View {
-        FigureView(shape: .squiggle, color: .green, shading: .open)
+        FiguresView(shape: .squiggle, color: .green, shading: .open)
     }
 }
