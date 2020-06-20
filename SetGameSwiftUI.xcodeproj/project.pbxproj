@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F00597DA248CF24600EE78A6 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00597D9248CF24600EE78A6 /* CardBackView.swift */; };
-		F012BAF4249E3A85000045EA /* SetFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012BAF3249E3A85000045EA /* SetFeature.swift */; };
+		F012BAF4249E3A85000045EA /* SetFeatureCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012BAF3249E3A85000045EA /* SetFeatureCategory.swift */; };
 		F012BAFA249E5BB0000045EA /* SetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012BAF9249E5BB0000045EA /* SetCard.swift */; };
 		F012BAFC249E5C30000045EA /* ClassicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012BAFB249E5C30000045EA /* ClassicCard.swift */; };
 		F012BAFE249E5CF2000045EA /* ClassicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F012BAFD249E5CF2000045EA /* ClassicCardView.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		F00597D9248CF24600EE78A6 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
-		F012BAF3249E3A85000045EA /* SetFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFeature.swift; sourceTree = "<group>"; };
+		F012BAF3249E3A85000045EA /* SetFeatureCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFeatureCategory.swift; sourceTree = "<group>"; };
 		F012BAF9249E5BB0000045EA /* SetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCard.swift; sourceTree = "<group>"; };
 		F012BAFB249E5C30000045EA /* ClassicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicCard.swift; sourceTree = "<group>"; };
 		F012BAFD249E5CF2000045EA /* ClassicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicCardView.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F098D4ED248C0EB300DA6909 /* SetGame.swift */,
-				F012BAF3249E3A85000045EA /* SetFeature.swift */,
+				F012BAF3249E3A85000045EA /* SetFeatureCategory.swift */,
 				F012BAF9249E5BB0000045EA /* SetCard.swift */,
 			);
 			path = Model;
@@ -272,7 +272,7 @@
 				F015B00F2494193300712F03 /* FiguresView.swift in Sources */,
 				F0A83D5A248D3E7600EBDF56 /* Squiggle.swift in Sources */,
 				F015AFF92493D35700712F03 /* Oval.swift in Sources */,
-				F012BAF4249E3A85000045EA /* SetFeature.swift in Sources */,
+				F012BAF4249E3A85000045EA /* SetFeatureCategory.swift in Sources */,
 				F015B0012493EDF400712F03 /* FigureShapeView.swift in Sources */,
 				F015B00B2494103000712F03 /* CardBackground.swift in Sources */,
 				F0D548D92496364A00E245D4 /* Grid.swift in Sources */,
