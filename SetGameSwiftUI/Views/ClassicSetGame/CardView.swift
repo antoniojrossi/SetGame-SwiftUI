@@ -13,6 +13,7 @@ struct CardView: View {
     // MARK: Properties
     var playFigure: ClassicPlayFigure
     var isFaceUp = true
+    var isSelected = false
     
     var body: some View {
         GeometryReader { geometry  in
@@ -24,7 +25,7 @@ struct CardView: View {
     
     func body(for size: CGSize) -> some View {
         ZStack{
-            CardBackground(isFaceUp: isFaceUp)
+            CardBackground(isFaceUp: isFaceUp, isSelected: isSelected)
             Group {
                 if isFaceUp {
                     CardFrontView(

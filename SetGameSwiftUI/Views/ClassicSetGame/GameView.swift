@@ -23,16 +23,22 @@ struct GameView: View {
         VStack {
             Spacer()
             Grid(game.playingCards) { card in
-                CardView(playFigure: card.figure as! ClassicPlayFigure, isFaceUp: card.isFaceUp)
-                    .padding(self.padding(for: size))
-            }
+                CardView(
+                    playFigure: card.figure as! ClassicPlayFigure,
+                    isFaceUp: card.isFaceUp,
+                    isSelected: card.isSelected)
+                        .padding(self.padding(for: size))
+                        .onTapGesture {
+                            self.game.choose(card: card)
+                        }
+            }.animation(.easeInOut)
             Divider()
             DeckView(deck: game.deck)
                 .padding(5)
                 .frame(width: size.width, height: size.height / 6, alignment: .leading)
                 .onTapGesture {
                     self.game.dealCards()
-            }
+            }.animation(.easeInOut)
         }
     }
     

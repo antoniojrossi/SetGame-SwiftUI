@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct Card: Identifiable, CustomStringConvertible {
+struct Card: Identifiable, CustomStringConvertible, Equatable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     // MARK: Properties
     let id = UUID()
     var isFaceUp = false
+    var isSelected = false
     let figure: PlayFigure
     
     var description: String {
