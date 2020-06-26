@@ -25,11 +25,18 @@ struct CardBackground: View {
     private func body(for size: CGSize) -> some View {
         RoundedRectangle(cornerRadius: cornerRadius(for: size))
             .fill(isFaceUp ? faceUpBackgroundColor : faceDownBackgroundColor)
+            .shadow(
+                color: isSelected ? Color.gray : Color.clear,
+                radius: cornerRadius(for: size),
+                x: 0,
+                y: 0
+            )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius(for: size))
                     .stroke(lineWidth: borderWidth(for: size)).foregroundColor(borderColor)
                     .blur(radius: blurRadius(for: size))
             )
+            
     }
     
     // MARK: Drawing constants

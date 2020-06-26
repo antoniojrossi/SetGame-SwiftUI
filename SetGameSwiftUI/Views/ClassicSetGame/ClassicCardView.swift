@@ -31,13 +31,15 @@ struct ClassicCardView: View {
                         shape: card.shape,
                         color: card.color,
                         shading: card.shading
-                    ).padding([.top, .bottom], self.padding(for: size))
+                    )
+                    .padding([.top, .bottom], self.padding(for: size))
                 } else {
                     CardBackView()
                 }
             }
         }
         .aspectRatio(cardAspectRatio, contentMode: .fit)
+        .scaleEffect(card.isSelected ? 1.1 : 1)
     }
     
     // MARK: Drawing constants
