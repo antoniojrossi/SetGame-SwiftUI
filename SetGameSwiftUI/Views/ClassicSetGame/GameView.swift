@@ -30,22 +30,32 @@ struct GameView: View {
                         }
             }.animation(.easeInOut)
             Divider()
-            HStack {
+            HStack(spacing: 0) {
                 DeckView(deck: game.deck)
-                    .frame(width:size.width / 6, height: size.height / 6, alignment: .trailing)
+                    .frame(width:deckWidth(for: size), height: deckHeight(for: size))
                     .padding([.top, .bottom])
                     .onTapGesture {
                         self.game.dealCards()
                 }
                 DeckView(deck: game.discardPile)
-                    .frame(width:size.width / 6, height: size.height / 6, alignment: .trailing)
+                    .frame(width:deckWidth(for: size), height: deckHeight(for: size))
                     .padding([.top, .bottom])
             }
         }
     }
     
+    // MARK: Drawing constants
+    
     func padding(for size: CGSize) -> CGFloat {
         size.width / 100
+    }
+    
+    func deckWidth(for size: CGSize) -> CGFloat {
+        size.width / 6
+    }
+    
+    func deckHeight(for size: CGSize) -> CGFloat {
+        size.height / 6
     }
 }
 
