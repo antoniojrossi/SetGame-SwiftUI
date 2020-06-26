@@ -30,14 +30,22 @@ protocol SetCard: Identifiable, Equatable where Feature1: SetFeatureCategory & E
 
 extension SetCard {
     var facingDown: Self {
-        var card = self
-        card.isFaceUp = false
-        return card
+        faceUp(false)
+    }
+    
+    var facingUp: Self {
+        faceUp(true)
     }
     
     var unselected: Self {
         var card = self
         card.isSelected = false
+        return card
+    }
+    
+    private func faceUp(_ facingUp: Bool) -> Self {
+        var card = self
+        card.isFaceUp = facingUp
         return card
     }
 }

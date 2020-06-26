@@ -19,27 +19,26 @@ struct SetGame<Card> where Card: SetCard {
     }
     
     init(cards: [Card]) {
-        deck = cards.map{ $0.facingDown.unselected }//.shuffled()
+        deck = cards.map(\.facingDown.unselected)//.shuffled()
         discardPile = []
         playingCards = []
         dealCards(initialNumberOfPlayingCards)
     }
     
     mutating func dealCards(_ numberOfCards: Int = 3) {
-        var newPlayingCards = deck.prefix(numberOfCards)
-        for index in newPlayingCards.indices {
-            newPlayingCards[index].isFaceUp = true
-        }
+        let newPlayingCards = deck.prefix(numberOfCards).map(\.facingUp)
         playingCards.append(contentsOf: newPlayingCards)
         deck = Array(deck.dropFirst(numberOfCards))
     }
     
     mutating func choose(_ card: Card) {
-        if selectedCards.count < cardsPerSet {
-            for index in playingCards.indices {
-                if playingCards[index] == card {
-                    playingCards[index].isSelected = !playingCards[index].isSelected
-                }
+        guard selectedCards.count < cardsPerSet else {
+            return
+        }
+        
+        for index in playingCards.indices {
+            if playingCards[index] == card {
+                playingCards[index].isSelected = !playingCards[index].isSelected
             }
         }
         isThereASet()
