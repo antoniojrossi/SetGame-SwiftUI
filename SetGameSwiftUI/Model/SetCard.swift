@@ -51,7 +51,7 @@ extension SetCard {
 }
 
 extension SetCard where Feature1: Equatable, Feature2: Equatable, Feature3: Equatable, Feature4: Equatable {
-    static func isASet(card1: Self, card2: Self, card3: Self) -> Bool {
+    static func isASet(_ card1: Self, _ card2: Self, _ card3: Self) -> Bool {
         let partialSets = [
             Feature1.isASet(content1: card1.feature1, content2: card2.feature1, content3: card3.feature1),
             Feature2.isASet(content1: card1.feature2, content2: card2.feature2, content3: card3.feature2),

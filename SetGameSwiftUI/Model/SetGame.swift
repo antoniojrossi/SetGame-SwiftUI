@@ -49,7 +49,7 @@ struct SetGame<Card> where Card: SetCard {
             return
         }
         
-        if Card.isASet(card1: selectedCards[0], card2: selectedCards[1], card3: selectedCards[2]) {
+        if Card.isASet(selectedCards[0], selectedCards[1], selectedCards[2]) {
             discardSelectedCards()
         } else {
             unselectCards()
