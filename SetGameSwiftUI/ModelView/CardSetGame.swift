@@ -35,4 +35,8 @@ class CardSetGame: ObservableObject {
     func choose(card: ClassicCard) {
         game.choose(card)
     }
+    
+    func dealInitialCards() {
+        game.dealCards(12)
+    }
 }

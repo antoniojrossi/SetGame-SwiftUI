@@ -42,6 +42,9 @@ struct GameView: View {
                     .padding([.leading, .trailing], 5)
             }
         }
+        .onAppear(){
+            self.game.dealInitialCards()
+        }
     }
     
     // MARK: Drawing constants

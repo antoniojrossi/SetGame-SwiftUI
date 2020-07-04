@@ -22,7 +22,6 @@ struct SetGame<Card> where Card: SetCard {
         deck = cards.map(\.facingDown.unselected)//.shuffled()
         discardPile = []
         playingCards = []
-        dealCards(initialNumberOfPlayingCards)
     }
     
     mutating func dealCards(_ numberOfCards: Int = 3) {
