@@ -33,13 +33,13 @@ struct GameView: View {
             HStack(spacing: 0) {
                 DeckView(deck: game.deck)
                     .frame(width:deckWidth(for: size), height: deckHeight(for: size))
-                    .padding([.top, .bottom])
+                    .padding([.leading, .trailing], 5)
                     .onTapGesture {
                         self.game.dealCards()
-                }
+                    }
                 DeckView(deck: game.discardPile)
                     .frame(width:deckWidth(for: size), height: deckHeight(for: size))
-                    .padding([.top, .bottom])
+                    .padding([.leading, .trailing], 5)
             }
         }
     }

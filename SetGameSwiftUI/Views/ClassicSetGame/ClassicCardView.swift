@@ -39,7 +39,7 @@ struct ClassicCardView: View {
             }
         }
         .aspectRatio(cardAspectRatio, contentMode: .fit)
-        .scaleEffect(card.isSelected ? 1.1 : 1)
+        .scaleEffect(card.isSelected ? 1.020 : 1)
     }
     
     // MARK: Drawing constants
